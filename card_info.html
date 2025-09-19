@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <!-- PayPal Business ID ან ელ-ფოსტა -->
+    <input type="hidden" name="business" value="grigolia333@gmail.com">
+    
+    <!-- პროდუქტის/სერვისის დეტალები -->
+    <input type="hidden" name="item_name" value="My Product">
+    <input type="hidden" name="amount" value="10.00">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- PayPal button -->
+    <input type="submit" value="Pay with PayPal">
+    </form>
+</body>
+</html>

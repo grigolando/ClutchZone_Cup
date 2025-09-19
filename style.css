@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #190033, #4b0082);
+  color: #fff;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 10;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #300460cc, #790fc6cc); /* cc = 80% გამჭვირვალობა */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.logo {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  width: 30vw;
+  min-width: 150px;
+  z-index: 10;
+}
+
+#search_button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  background-color: rgb(241, 239, 239);
+}
+
+@media (max-width: 460px) {
+  #search {
+    display: none;
+  }
+  #search_button {
+    display: block;
+  }
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+  flex-direction: row;
+}
+
+#banner-rigth {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.banner h1 {
+  font-size: clamp(16px, 2vw, 32px);
+  margin: 15px 0;
+}
+
+.banner p {
+  margin-bottom: 15px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgb(182, 182, 182);
+}
+
+.banner img {
+  border: 3px solid none;
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px rgb(101, 62, 105);
+  width: 19%;
+  min-width: 100px;
+  transition: 0.2s ease-in all;
+}
+
+.banner img:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(75, 0, 130, 0.7);   /* indigo 70% გამჭვირვალე */
+  padding: 2%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+
+.stats span {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+#consoles_logo i {
+  padding: 0 10px;
+}
+
+#consoles_logo i:nth-child(1) {
+  color: blue;
+}
+
+#consoles_logo i:nth-child(3) {
+  color: green;
+}
+
+/* Tournaments */
+.tournaments {
+  padding: 40px;
+}
+
+.tournaments h2 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 924px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 487px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* background: linear-gradient(-155deg, #3f0d76, #901de2); */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #e68a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-right img {
+    width: 200px;
+    margin-top: 20px;
+  }
+  #consoles_logo {
+    margin-top: 15px;
+  }
+}
+
+@keyframes search {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: -100%;
+  }
+  100% {
+    width: 100%;
+    height: 50%;
+    opacity: 100%;
+  }
+}
