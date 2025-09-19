@@ -3,20 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cup Info</title>
+    <link rel="stylesheet" href="./card_info.css">
 </head>
 <body>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <!-- PayPal Business ID ან ელ-ფოსტა -->
-    <input type="hidden" name="business" value="grigolia333@gmail.com">
-    
-    <!-- პროდუქტის/სერვისის დეტალები -->
-    <input type="hidden" name="item_name" value="My Product">
-    <input type="hidden" name="amount" value="10.00">
-    <input type="hidden" name="currency_code" value="USD">
+    <header>
+        <h1>Fortnite Tournament</h1>
+    </header>
 
-    <!-- PayPal button -->
-    <input type="submit" value="Pay with PayPal">
-    </form>
+    <!-- <section id="mian_section">
+        <article>
+            <div>
+
+            </div>
+        </article>
+
+        <article>
+
+        </article>
+    </section> -->
+
+    <section class="tournament">
+        <div class="left-side">
+            <div id="left_top">
+                <div class="game-card">
+                    <img src="./imgs/ჰეადერ_ვოლპეპრე.jpg" alt="Pes 2020">
+                    <div class="game-info">
+                        <p><strong>Game:</strong> Battle royal</p>
+                        <p><strong>Region:</strong> Worldwide</p>
+                        <p><strong>Entry fee:</strong> 10$</p>
+                    </div>
+                </div>
+
+                <div class="event-info">
+                    <p>🕑 07:00 PM (WAT)</p>
+                    <p>📅 31st Jul - 1st Aug 2021</p>
+                    <button class="register-btn">Register</button>
+                </div>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <span>👥</span>
+                    <h4>TEAM SIZE</h4>
+                    <p>1v1</p>
+                </div>
+                <div class="info-card">
+                    <span>⚔️</span>
+                    <h4>FORMAT</h4>
+                    <p>Direct Elimination</p>
+                </div>
+                <div class="info-card">
+                    <span>🏆</span>
+                    <h4>PRIZE POOL</h4>
+                    <p>₦50,000</p>
+                </div>
+                <div class="info-card">
+                    <span>⏰</span>
+                    <h4>CHECK-IN</h4>
+                    <p>1 hour before</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="prizes">
+                <h3>PRIZES</h3>
+                <ul>
+                    <li><span>🏆 Winner</span> <strong>₦20,000</strong></li>
+                    <li><span>🥈 2st place</span> ₦15,000</li>
+                    <li><span>🥉 3nd place</span> ₦10,000</li>
+                </ul>
+            </div>
+
+            <div class="stats">
+            <h3>TOURNAMENT STATS</h3>
+            <div class="stat-grid">
+                <div><h4>0</h4><p>PLAYERS</p></div>
+                <div><h4>0</h4><p>TEAMS</p></div>
+                <div><h4>0</h4><p>SLOTS LEFT</p></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>

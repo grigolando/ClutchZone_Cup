@@ -1,0 +1,178 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(17, 17, 17);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+    background-image: url("./imgs/header_wallpepaer.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* შავი ოვერლეი */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* აქ არი დაბნელება */
+}
+
+/* ქვედა ნაწილის გაქრობა */
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%);
+}
+
+header h1 {
+    position: relative;
+    z-index: 3;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-family: cursive;
+    font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+}
+
+/* #mian_section {
+    display: flex;
+    flex-direction: row;
+} */
+
+.tournament {
+  display: flex;
+  gap: 2rem;
+  padding: 5rem;
+  color: #fff;
+  background: #111;
+  font-family: "Arial", sans-serif;
+}
+
+/* LEFT */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.game-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.game-card img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.register-btn {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-card {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* RIGHT */
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prizes {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.prizes h3 {
+  margin-bottom: 1rem;
+}
+
+.prizes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prizes li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  padding: 2%;
+}
+.prizes li:last-child {
+  border-bottom: none;
+}
+.prizes li:nth-child(1) {
+    color: gold;
+}
+.prizes li:nth-child(2) {
+    color: silver;
+}
+.prizes li:nth-child(3) {
+    color: rgb(218, 133, 133);
+}
+
+.stats {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.stat-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.stat-grid div {
+  text-align: center;
+}
+
+.stat-grid h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#left_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
