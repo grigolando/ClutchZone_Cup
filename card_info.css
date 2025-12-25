@@ -1,0 +1,265 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(17, 17, 17);
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  background-image: url("./imgs/logoti.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* შავი ოვერლეი */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* აქ არი დაბნელება */
+}
+
+/* ქვედა ნაწილის გაქრობა */
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+header h1 {
+  position: relative;
+  z-index: 3;
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-family: cursive;
+  font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+}
+
+/* #mian_section {
+    display: flex;
+    flex-direction: row;
+} */
+
+.tournament {
+  display: flex;
+  gap: 2rem;
+  padding: 5rem;
+  color: #fff;
+  background: #111;
+  font-family: "Arial", sans-serif;
+}
+
+/* LEFT */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.game-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.game-card img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.register-btn {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  background: #1251d8;
+  transform: scale(1.01);
+  transition: .4s ease-in all;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-card {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* RIGHT */
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prizes {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.prizes h3 {
+  margin-bottom: 1rem;
+}
+
+.prizes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prizes li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  padding: 2%;
+}
+.prizes li:last-child {
+  border-bottom: none;
+}
+.prizes li:nth-child(1) {
+  color: gold;
+}
+.prizes li:nth-child(2) {
+  color: silver;
+}
+.prizes li:nth-child(3) {
+  color: rgb(218, 133, 133);
+}
+
+.stats {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.stat-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+@media (max-width: 313px) {
+  .stat-grid {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.stat-grid div {
+  text-align: center;
+}
+
+.stat-grid h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#left_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#back_to_home {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 11;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.5);
+  transition: 0.4s ease all;
+}
+
+#back_to_home i {
+  color: white;
+  font-size: clamp(22px, 2vw, 25px);
+}
+
+#back_to_home:hover {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .tournament {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 607px) {
+  #left_top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tournament {
+    padding: 2rem;
+  }
+}
+
+#select_currency_select {
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  background-color: grey;
+  color: white;
+  width: 110px;        /* ცოტა ფართო */
+  height: 34px;        /* გაჩუქებული სიმაღლე */
+  border-radius: 10px;
+  padding: 0 10px;     /* არ გამოიყენო % პატარა ელემენტზე */
+  font-weight: bold;
+  box-shadow: 3px 3px 10px black;
+  z-index: 9999;       /* გამოიყვანს ზედა პლაინში */
+  line-height: 34px;   /* ვიბალანსებს ტექსტის სვეტს */
+  -webkit-appearance: none; /* ექსტრასაც გაუკონტროლე, თუ გინდა ნეიტრალური გამომეტყველება */
+  appearance: none;
+  text-align: center;
+}
+
+/* თუ გინდა რომ ფოკუსზე ჩანდეს ნაცრის ზოლები */
+#select_currency_select:focus {
+  outline: none;
+}
+
+#select_currency_select:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: none;
+}

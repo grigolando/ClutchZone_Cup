@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cup Info</title>
+    <link rel="stylesheet" href="./card_info.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <a href="./index.html"
+      ><button id="back_to_home"><i class="fa-solid fa-arrow-left"></i></button
+    ></a>
+    <header>
+      <h1><span id="title">Could't Load!</span></h1>
+    </header>
+
+    <select name="" id="select_currency_select">
+      <option value="USD">USD</option>
+      <option value="EURO">EURO</option>
+      <option value="Gell">Gell</option>
+    </select>
+
+    <section class="tournament">
+      <div class="left-side">
+        <div id="left_top">
+          <div class="game-card">
+            <img id="game_img" src="" alt="Game" />
+            <div class="game-info">
+              <p><strong>Game:</strong> <span id="game_title">-</span></p>
+              <p><strong>Region:</strong> Worldwide</p>
+              <p id="entry_fee">
+                <strong>Entry fee:</strong> <span id="game_entry_fee">-</span>
+                <span id="game_entry_fee_currency"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="event-info" id="event_info">
+            <p>🕑 <span id="time" data-utc="2025-11-24T12:00:00Z"></span></p>
+            <p>📅 <span id="date">-</span></p>
+            <a href="./payment.html"
+              ><button class="register-btn">Register</button></a
+            >
+          </div>
+        </div>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <span>👥</span>
+            <h4>TEAM SIZE</h4>
+            <p>1</p>
+          </div>
+          <div class="info-card">
+            <span>⚔️</span>
+            <h4>GOAL</h4>
+            <p>Be the last one standing</p>
+          </div>
+          <div class="info-card">
+            <span>🏆</span>
+            <h4>PRIZE POOL</h4>
+            <p id="prize_pool">Dynamic</p>
+          </div>
+          <div class="info-card">
+            <span>📀</span>
+            <h4>RECORD</h4>
+            <p>Game is recorded</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="prizes">
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: left;
+              align-items: center;
+            "
+          >
+            <h3>PRIZES</h3>
+          </div>
+          <ul>
+            <li>
+              <span>🏆 Winner</span>
+              <strong>
+                <span id="prize1" class="prize_for_winners">100</span>
+              </strong>
+            </li>
+            <li>
+              <span>🥈 2nd place</span>
+              <span>
+                <span id="prize2" class="prize_for_winners">50</span>
+              </span>
+            </li>
+            <li>
+              <span>🥉 3rd place</span>
+              <span>
+                <span id="prize3" class="prize_for_winners">25</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          <h3>TOURNAMENT STATS</h3>
+          <div class="stat-grid">
+            <div>
+              <h4>1</h4>
+              <p>JOINED</p>
+            </div>
+            <div>
+              <h4>99</h4>
+              <p>LEFT</p>
+            </div>
+            <div>
+              <h4>100</h4>
+              <p>TOTAL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./card_info.js" defer></script>
+  </body>
+</html>
